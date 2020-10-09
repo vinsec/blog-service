@@ -1,7 +1,6 @@
 package main
 
 import (
-<<<<<<< HEAD
 	"github.com/vinsec/blog-service/global"
 	"github.com/vinsec/blog-service/internal/model"
 	"github.com/vinsec/blog-service/internal/routers"
@@ -75,20 +74,6 @@ func setupDBEngine()error{
 	return nil
 }
 
-
-func main(){
-	router := routers.NewRouter()
-	server := &http.Server{
-		Addr:				":"+global.ServerSetting.HttpPort,
-		Handler: 			router,
-		ReadTimeout: 		global.ServerSetting.ReadTimeOut,
-		WriteTimeout: 		global.ServerSetting.WriteTimeOut,
-=======
-	"github.com/vinsec/blog-service/internal/routers"
-	"net/http"
-	"time"
-)
-
 func main(){
 	router := routers.NewRouter()
 	server := &http.Server{
@@ -96,7 +81,6 @@ func main(){
 		Handler: 			router,
 		ReadTimeout: 		10 * time.Second,
 		WriteTimeout: 		10 * time.Second,
->>>>>>> aee0ebe... 1st commit
 		MaxHeaderBytes: 	1 << 20,
 	}
 	server.ListenAndServe()

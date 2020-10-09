@@ -1,6 +1,6 @@
 package model
 
-<<<<<<< HEAD
+
 import (
 	"fmt"
 	"github.com/vinsec/blog-service/global"
@@ -9,8 +9,6 @@ import (
 	_"github.com/jinzhu/gorm/dialects/mysql"
 	)
 
-=======
->>>>>>> aee0ebe... 1st commit
 type Model struct {
 	ID	uint32	`gorm:"primary_key" json:"id"`
 	CreatedBy	string	`json:"created_by"`
@@ -20,7 +18,7 @@ type Model struct {
 	DeletedOn	uint32	`json:"deleted_on"`
 	IsDel		uint8	`json:"is_del"`
 }
-<<<<<<< HEAD
+
 
 func NewDBEngine(databaseSetting *setting.DataBaseSettingS)(*gorm.DB,error){
 	db,err := gorm.Open(databaseSetting.DBType,fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=%s&parseTime=%t&loc=Local",
@@ -45,5 +43,4 @@ func NewDBEngine(databaseSetting *setting.DataBaseSettingS)(*gorm.DB,error){
 
 	return db,nil
 }
-=======
->>>>>>> aee0ebe... 1st commit
+
