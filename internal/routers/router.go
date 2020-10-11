@@ -2,11 +2,14 @@ package routers
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/vinsec/blog-service/internal/middleware"
 	v1 "github.com/vinsec/blog-service/internal/routers/api/v1"
 )
 
 func NewRouter()*gin.Engine{
 	r := gin.Default()
+	r.Use(middleware.Translations())
+
 	article := v1.NewArticle()
 	tag := v1.NewTag()
 
