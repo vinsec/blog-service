@@ -12,8 +12,8 @@ App:
 DataBase:
   DBType: mysql
   Username: root
-  Password: 
-  Host: 127.0.0.1:3306
+  Password: ..;;?0Gt:!B|KF.d*mlU!LN~cGYuXa
+  Host: 10.249.178.53:3306
   DBName: blog_service
   TablePrefix: blog_
   Charset: utf8

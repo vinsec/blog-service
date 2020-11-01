@@ -32,6 +32,7 @@ type DataBaseSettingS struct {
 	MaxOpenConns	int
 }
 
+//unmarshal configs from FILE to STRUCT
 func (s *Setting)ReadSection(k string,v interface{})error{
 	err := s.vp.UnmarshalKey(k,v)
 	if err != nil{

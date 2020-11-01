@@ -6,6 +6,8 @@ type Setting struct {
 	vp *viper.Viper
 }
 
+
+//Instantiate a config parser
 func NewSetting()(*Setting,error){
 	vp := viper.New()
 	vp.AddConfigPath("configs/")

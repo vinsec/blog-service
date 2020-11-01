@@ -29,6 +29,7 @@ func init(){
 	}
 }
 
+//unmarshal config sections from FILE to the global objects
 func setupSetting()error{
 	settings,err := setting.NewSetting()
 	if err != nil{
@@ -65,6 +66,7 @@ func setupLogger()error{
 	return nil
 }
 
+//Use "global.DatabaseSetting" to initiate the "global.DBEngine"
 func setupDBEngine()error{
 	var err error
 	global.DBEngine,err = model.NewDBEngine(global.DatabaseSetting)
